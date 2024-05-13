@@ -19,6 +19,7 @@ import net.miginfocom.swing.MigLayout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
+import pe.edu.upeu.syscenterlife.GUII.GUIMain;
 import pe.edu.upeu.syscenterlife.componentes.Button;
 import pe.edu.upeu.syscenterlife.componentes.FondoPanel;
 import pe.edu.upeu.syscenterlife.componentes.MyPasswordField;
@@ -83,8 +84,8 @@ public class Login extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (txtUsername.getText().equals("admin")
                         && String.valueOf(txtPassword.getPassword()).equals("admin")) {
-                    //gUIMain.setContexto(ctx);
-                    //gUIMain.setVisible(true);
+                    gUIMain.setContexto(ctx);
+                    gUIMain.setVisible(true);
                     dispose();
                 } else {
                     new MsgBox("Error al ingresar!", NORMAL, "");
